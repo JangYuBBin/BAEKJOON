@@ -1,7 +1,8 @@
 # LCS 2, 9252번, 백준
 
 # my thoughts :
-# 1. ....
+# 1. By using Dynamic Programming, We can solve it..!!
+# 2. 9251번, LCS와 매우 유사하게 접근하면 됩니다..!!
 
 import sys
 
@@ -14,6 +15,7 @@ len2 = len(str2)
 dp = [[""] * len2 for _ in range(len1)]
 # 초깃값 설정
 checkFlag = False
+
 for i in range(0, 0 + 1, 1):
     for j in range(0, len2, 1):
         if str1[i] == str2[j]:
@@ -28,6 +30,7 @@ for i in range(0, 0 + 1, 1):
         break
 
 checkFlag = False
+
 for i in range(0, len1, 1):
     for j in range(0, 0 + 1, 1):
         if str1[i] == str2[j]:
@@ -40,8 +43,6 @@ for i in range(0, len1, 1):
     
     if checkFlag == True:
         break
-
-# print(dp)
 
 for i in range(1, len1, 1):
     for j in range(1, len2, 1):
